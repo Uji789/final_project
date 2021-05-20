@@ -1,0 +1,8 @@
+body {
+    background: #ffffff;
+    transition: all 1s;
+}
+
+.logo__img {
+    content: url(../img/logo.svg);
+}

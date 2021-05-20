@@ -1,0 +1,410 @@
+.navigation {
+    margin: 0;
+    padding: 0;
+
+    &-wrapper {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: $black;
+        width: 130px;
+        height: 100vh;
+        border-radius: 0 20px 20px 0;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        // align-items: center;
+        display: grid;
+        grid-template-rows: 1fr 10fr 1fr;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+
+        @media (max-width: 1000px) {
+            width: 60px;
+        }
+        @media (max-width: 880px) {
+            display: none;
+        }
+    }
+
+    &__logo-font {
+        margin: 50px 0 100px 0;
+        padding: 0;
+        font-family: Baloo Bhai;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 64px;
+        line-height: 64px;
+        color: #fefefe;
+        // text-decoration: none;
+        // align-self: flex-start;
+    }
+
+    &__nav {
+        margin: 0;
+        padding: 0;
+        justify-self: center;
+    }
+
+    &__list {
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+    }
+
+    &__item {
+        width: 26px;
+        height: 26px;
+        margin: 0;
+        padding: 0 0 65px 0;
+        list-style: none;
+
+        &-img {
+            // width: 100%;
+            // height: auto;
+
+            &:hover {
+                border-radius: 2px;
+                border: 2px solid white;
+                background: $accent;
+            }
+        }
+    }
+
+    &__exit {
+        margin-bottom: 50px;
+        width: 100%;
+        height: 26px;
+    }
+}
+// Конец левой менюшки
+
+// Страница
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    & .mix {
+        display: none;
+    }
+}
+
+section {
+    margin-top: 90px;
+}
+
+.filter {
+    &-wrapper {
+        margin: 32px 10px 0 150px;
+
+        @media (max-width: 1000px) {
+            margin: 32px 20px 0 70px;
+        }
+        @media (max-width: 880px) {
+            margin: 32px 20px 0 20px;
+        }
+    }
+
+    &__title {
+        // margin: 32px 0 0 250px;
+        font-family: SF UI Text;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 29px;
+        color: $black;
+    }
+
+    &__blocks {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__button {
+        font-family: SF UI Text;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        opacity: 0.3;
+        color: $black;
+        border: none;
+        background: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0 10px 0 0;
+
+        @media (max-width: 550px) {
+            font-size: 14px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+            opacity: 1;
+        }
+
+        // &:focus {
+        //     outline: none;
+        // }
+
+        &--active {
+            opacity: 1;
+            outline: none;
+        }
+    }
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 3fr 1fr;
+    // display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    @media (max-width: 880px) {
+        grid-template-columns: 1fr 2fr 2fr 1fr 1fr;
+    }
+    @media (max-width: 550px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__btn {
+        box-sizing: border-box;
+        width: 120px;
+        height: 40px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 15px;
+        text-align: center;
+        margin: 0 5px;
+        padding: 0;
+
+        @media (max-width: 800px) {
+            width: 100px;
+            margin: 5px;
+        }
+        @media (max-width: 750px) {
+            margin: 2px 0;
+        }
+        @media (max-width: 550px) {
+            margin: 0 10px;
+        }
+    }
+    &__icon {
+        margin-left: 20px;
+        width: 32px;
+        height: 32px;
+
+        @media (max-width: 550px) {
+            margin: 0 0 10px 0;
+        }
+
+        &-img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    &__title {
+        @media (max-width: 1100px) {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        &-top {
+            font-family: SF UI Text;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            color: $black;
+            text-decoration: none;
+
+            @media (max-width: 550px) {
+                margin: 16px 0;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &-bottom {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #171717;
+            margin-top: 8px;
+        }
+    }
+    &__clock {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-icon {
+            margin-right: 5px;
+        }
+    }
+    &__rating {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 550px) {
+            margin: 0;
+            padding: 0 0 10px 0;
+        }
+        &-totall {
+            @media (max-width: 550px) {
+                margin: 0;
+            }
+        }
+
+        &-icon {
+            margin-right: 5px;
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: end;
+
+        @media (max-width: 750px) {
+            display: flex;
+            flex-direction: column;
+        }
+        @media (max-width: 550px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+        }
+    }
+}
+
+.mobile {
+    &-open {
+        margin: 15px;
+        display: none;
+
+        @media (max-width: 880px) {
+            display: block;
+        }
+    }
+
+    &-menu {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background: $black;
+        width: 100%;
+        height: 100%;
+        max-height: 640px;
+        position: absolute;
+        top: -100%;
+        display: none;
+        flex-direction: column;
+        box-sizing: border-box;
+        transition: all 0.5s ease-in-out;
+
+        &--active {
+            display: flex;
+            top: 0;
+            transition: all 0.5s ease-in-out;
+        }
+
+        &__logo {
+            display: flex;
+            justify-content: space-between;
+
+            &-font {
+                font-family: Baloo Bhai;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 64px;
+                line-height: 64px;
+                align-items: center;
+                color: #fefefe;
+                margin: 0;
+                padding: 15px 0 0 15px;
+            }
+        }
+
+        &__btn {
+            width: 25px;
+            height: 25px;
+            margin: 20px;
+            padding: 0;
+
+            &-img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__nav {
+            margin: 15px 0 0 15px;
+            flex: 1 0 auto;
+        }
+
+        &__list {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        &__item {
+            margin: 0 25px 50px 0;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 26px;
+
+            &-link {
+                margin-right: 25px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                text-decoration: none;
+            }
+
+            &-img {
+                margin-right: 25px;
+                flex-shrink: 0;
+            }
+            
+        }
+
+        &__name {
+            font-family: SF UI Text;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            color: #ffffff;
+
+            
+        }
+
+        &__exit {
+            margin: 15px;
+            width: 100%;
+            height: 26px;
+            display: flex;
+        }
+    }
+}

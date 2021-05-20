@@ -1,0 +1,148 @@
+.nav {
+
+  &__list {
+    display: flex;
+    align-items: center;
+    animation: fadeInLeft 1s ease-in-out normal forwards;
+    
+  }
+
+  &__item {
+    margin-left: 44px;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    transition: all .2s ease-in-out;
+    outline-color: transparent;
+  
+    &:hover,
+    &:focus {
+      color: $accent;
+      outline-color: $accent;
+    }
+  }
+}
+
+.mobile-nav {
+  padding: 15px;
+  background-color: $black;
+  position: relative;
+  transition: all .7s ease-in-out;
+  &__list {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    margin-bottom: 50px;
+    &:last-child {
+      margin-bottom: 25px;
+    }
+  }
+  &__link {
+    color: $white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: capitalize;
+    transition: all .2s ease-in-out;
+    outline-color: transparent;
+    &:hover,
+    &:focus {
+      color: $accent;
+      outline-color: $accent;
+    }
+  }
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 20;
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  &:hover,
+  &:focus {
+    transform: rotate(45deg);
+  }
+}
+
+.burger {
+  display: none;
+  padding: 9px 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  &__item {
+    display: inherit;
+    background-color: $accent;
+    color: transparent;
+    font-size: 0;
+    width: 30px;
+    height: 2px;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $accent;
+      width: 13px;
+      height: 2px;
+      top: -5px;
+      right: 0;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: $accent;
+      width: 13px;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+    }
+
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.burger__menu {
+  display: none;
+  transition: all .7s ease-in-out;
+  &--active {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav__item {
+    margin-left: 24px;
+  }
+}
+@media (max-width: 575px) {
+  .navigation {
+    display: none;
+    &--footer {
+      display: flex;
+    }
+  }
+  
+  .burger {
+    display: block;
+  }
+}

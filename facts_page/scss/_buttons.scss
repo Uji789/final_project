@@ -1,0 +1,31 @@
+.btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    font-size: 13px;
+    border: none;
+    margin-right: 25px;
+
+    &:nth-child(2){
+        margin-right: 0;
+    }
+}
+.content__card{
+    &-update{
+        background-color: $accent;
+        color: $white;
+        border: 2px solid $accent;
+        &:hover {
+            background-color: lighten($accent, 10%);
+        }
+    }
+    &-delete{
+        background-color: $alert;
+        color: $white;
+        border: 2px solid $alert;
+        &:hover {
+            background-color: lighten($alert, 10%);
+        }
+    }
+}

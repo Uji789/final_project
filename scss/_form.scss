@@ -1,0 +1,47 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  &--feedback {
+    max-width: 450px;
+    padding: 0px 10px;
+    margin: 0 auto;
+  }
+  &__label {
+    margin-bottom: 10px;
+    color: $black;
+    font-weight: 600;
+    &--feedback {
+      color: $blue;
+    }
+  }
+  &__input {
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    outline: $black solid 1px;
+    color: $black;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    transition: all .3s ease-in-out;
+    &::placeholder {
+      color: lighten($black, 10%);
+    }
+    &:hover, &:focus {
+      border: 1px solid $accent;
+      outline: $accent solid 1px;
+    }
+    &--feedback {
+      outline: none;
+      border: 1px solid $blue;
+      border-radius: 8px;
+      background: transparent;
+      &:hover, &:focus {
+        border: 1px solid $accent;
+        outline: none;
+        background: $lightGrey;
+      }
+    }
+  }
+}

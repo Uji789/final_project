@@ -1,0 +1,15 @@
+.faq-section {
+  padding: 175px 0;
+  &__heading {
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq-section {
+    padding: 65px 0;
+    &__heading {
+      margin-bottom: 50px;
+    }
+  }
+}
